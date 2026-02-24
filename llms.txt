@@ -1,0 +1,32 @@
+# Meridian
+
+Meridian is a web-scale evidence compiler for IPO alpha research.
+
+## Core capability
+- `ipo_dislocation_score(company_id, as_of_ts, horizon_days=28)`
+- Returns: `score`, `uncertainty`, `top_drivers`, `decay_half_life_days`, `evidence_graph_id`, `lineage_hash`
+
+## Why Meridian
+- Compiles evidence graphs from high-throughput crawls.
+- Uses agentic contradiction analysis (Claim, Reality, Novelty, Skeptic, Portfolio agents).
+- Produces deterministic lineage and reproducible signal cards.
+
+## API surface
+- `POST /v1/ipo/score`
+- `GET /v1/ipo/{company_id}/evidence-graph?as_of=...`
+- `POST /v1/ipo/backtest`
+- `GET /v1/system/throughput`
+
+## Repository map
+- `python/meridian/api.py`: FastAPI endpoints
+- `python/meridian/scoring.py`: flagship scoring function
+- `python/meridian/agents.py`: multi-agent scoring logic
+- `python/meridian/dom_analyzer.py`: DOM extraction + fallback
+- `python/meridian/storage.py`: Postgres/in-memory persistence
+- `cpp/src/`: async data-plane engine skeleton
+- `db/schema.sql`: queue, facts, signal card, lineage schema
+- `landing/index.html`: project landing page + FAQ
+
+## Safety and scope
+- Shadow research only; not live execution.
+- Claims and metrics must be validated in your environment.

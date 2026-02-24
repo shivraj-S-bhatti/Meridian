@@ -1,0 +1,10 @@
+See `llms.txt` for the canonical LLM-readable project summary.
+
+Meridian exposes a single flagship function:
+`ipo_dislocation_score(company_id, as_of_ts, horizon_days=28)`
+
+This repository contains:
+- high-throughput C++ data plane scaffold
+- Python agentic control plane
+- API endpoints and backtest flow
+- FAQ-enhanced landing page for SEO

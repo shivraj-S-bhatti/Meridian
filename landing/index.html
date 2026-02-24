@@ -113,11 +113,81 @@
       font-size: 1.7rem;
     }
     .compare p { color: var(--muted); }
+    .faq {
+      background: #0d1e34;
+      border: 1px solid #ffffff20;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+    .faq h2 {
+      margin-top: 0;
+      font-family: "Fraunces", serif;
+      font-size: 1.7rem;
+    }
+    .faq-item {
+      border-top: 1px solid #ffffff1d;
+      padding: 14px 0;
+    }
+    .faq-item:first-of-type {
+      border-top: 0;
+      padding-top: 6px;
+    }
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      color: var(--accent-2);
+    }
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
     footer { color: var(--muted); padding-bottom: 40px; }
     @media (max-width: 880px) {
       .metrics, .grid { grid-template-columns: 1fr; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Meridian's flagship function?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Meridian exposes ipo_dislocation_score(company_id, as_of_ts, horizon_days) to return an explainable score, uncertainty, drivers, and lineage hash."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Meridian different from answer engines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Answer engines summarize text. Meridian compiles evidence graphs from high-throughput crawl data and outputs reproducible, provenance-backed signal cards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Meridian run live capital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Meridian is scoped for shadow research and explainable alpha discovery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Meridian stay robust when page layouts change?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The system uses DOM pattern analysis with deterministic extraction fallbacks so crawling and fact extraction continue through structural page changes."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -192,6 +262,26 @@
   "as_of_ts": "2026-02-24T15:30:00Z",
   "horizon_days": 28
 }</code>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>FAQ</h2>
+      <article class="faq-item">
+        <h3>What is Meridian's flagship function?</h3>
+        <p><code>ipo_dislocation_score(company_id, as_of_ts, horizon_days)</code> returns score, uncertainty, top drivers, decay half-life, and deterministic lineage.</p>
+      </article>
+      <article class="faq-item">
+        <h3>How is this different from Perplexity-style systems?</h3>
+        <p>Those systems are answer-first. Meridian is evidence-first: it compiles crawl outputs into graph-based contradictions and produces reproducible signal cards.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Is Meridian a live-trading engine?</h3>
+        <p>No. Meridian is a shadow-research platform for explainable alpha discovery and validation.</p>
+      </article>
+      <article class="faq-item">
+        <h3>How can agents discover this project quickly?</h3>
+        <p>Use the repository root <code>llms.txt</code> (or <code>llm.text</code>) for an agent-readable summary, interface list, and crawl path hints.</p>
+      </article>
     </section>
 
     <footer>
