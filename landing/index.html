@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian | One Function for IPO Dislocation Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07101e;
+      --panel: #0f1f35;
+      --ink: #ecf3ff;
+      --muted: #a8bbd8;
+      --accent: #ffbe5c;
+      --accent-2: #6ad8ff;
+      --danger: #ff7f7f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1000px 400px at 20% -10%, #1d355f 0, transparent 60%),
+        radial-gradient(700px 300px at 90% 10%, #203f5a 0, transparent 60%),
+        var(--bg);
+    }
+    .wrap { width: min(1180px, 92vw); margin: 0 auto; }
+    .hero { padding: 72px 0 40px; }
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.2rem, 5vw, 4.1rem);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      letter-spacing: 0.01em;
+    }
+    .sub { color: var(--muted); max-width: 760px; font-size: 1.15rem; }
+    .cta {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 13px 18px;
+      border-radius: 10px;
+      border: 1px solid #ffffff26;
+      background: linear-gradient(120deg, var(--accent), #ffdca2);
+      color: #1a2433;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .metrics {
+      margin: 34px 0 26px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, minmax(140px, 1fr));
+    }
+    .metric {
+      background: linear-gradient(170deg, #132743, #0b1930);
+      border: 1px solid #ffffff1f;
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .metric b { display: block; font-size: 1.35rem; color: var(--accent-2); }
+    .metric span { color: var(--muted); font-size: 0.92rem; }
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-bottom: 56px;
+    }
+    .shot {
+      background: linear-gradient(160deg, #111f34, #0b1425);
+      border: 1px solid #ffffff20;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 240px;
+    }
+    .shot header {
+      padding: 10px 14px;
+      border-bottom: 1px solid #ffffff16;
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .panel-body { padding: 16px; }
+    .bar { height: 10px; border-radius: 6px; background: #21314d; margin: 10px 0; overflow: hidden; }
+    .fill { height: 100%; background: linear-gradient(90deg, var(--accent-2), #d2f5ff); }
+    .debate { display: grid; gap: 10px; }
+    .bubble { padding: 10px 12px; border-radius: 10px; font-size: 0.9rem; }
+    .pro { background: #173859; border: 1px solid #69c2ff54; }
+    .con { background: #4a2131; border: 1px solid #ff8aa044; }
+    code {
+      display: block;
+      padding: 14px;
+      border-radius: 12px;
+      background: #091426;
+      border: 1px solid #ffffff1c;
+      color: #c9ecff;
+      overflow: auto;
+      font-size: 0.9rem;
+    }
+    .compare {
+      background: #0d1e34;
+      border: 1px solid #ffffff20;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 70px;
+    }
+    .compare h2 {
+      margin-top: 0;
+      font-family: "Fraunces", serif;
+      font-size: 1.7rem;
+    }
+    .compare p { color: var(--muted); }
+    footer { color: var(--muted); padding-bottom: 40px; }
+    @media (max-width: 880px) {
+      .metrics, .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Meridian: One Function for IPO Dislocation Intelligence</h1>
+      <p class="sub">From 2M+ pages/day to one explainable score in seconds. Meridian compiles machine-verifiable market evidence, not just summaries.</p>
+      <a class="cta" href="#demo">Run <code>ipo_dislocation_score()</code></a>
+      <div class="metrics">
+        <div class="metric"><b>15K+</b><span>Pages / Minute</span></div>
+        <div class="metric"><b>2M+</b><span>Pages / Day</span></div>
+        <div class="metric"><b>95%</b><span>Provenance Coverage</span></div>
+        <div class="metric"><b>&lt;1s</b><span>Warm Query Latency</span></div>
+      </div>
+    </section>
+
+    <section class="grid" id="demo">
+      <article class="shot">
+        <header>Crawl Control Tower</header>
+        <div class="panel-body">
+          <div>Queue Lag p95: 4.2m</div>
+          <div class="bar"><div class="fill" style="width:72%"></div></div>
+          <div>Extraction p95: 120ms</div>
+          <div class="bar"><div class="fill" style="width:84%"></div></div>
+          <div>Failure Buckets (24h): fetch=2, extract=1, db=0</div>
+        </div>
+      </article>
+
+      <article class="shot">
+        <header>Agent Debate Timeline</header>
+        <div class="panel-body debate">
+          <div class="bubble pro">ClaimAgent: Management expects strong demand expansion.</div>
+          <div class="bubble con">SkepticAgent: Supplier delays and inventory pressure contradict pace claims.</div>
+          <div class="bubble pro">PortfolioAgent: Net contradiction supports short-bias 28d horizon.</div>
+        </div>
+      </article>
+
+      <article class="shot">
+        <header>Evidence Graph</header>
+        <div class="panel-body">
+          <code>{
+  "graph_id": "graph-9d4cb1f3e2d8",
+  "nodes": 12,
+  "edges": 27,
+  "lineage_hash": "a9c4...f11"
+}</code>
+        </div>
+      </article>
+
+      <article class="shot">
+        <header>Signal Card</header>
+        <div class="panel-body">
+          <code>{
+  "company_id": "ACME-IPO",
+  "score": -41.8,
+  "uncertainty": 0.34,
+  "decay_half_life_days": 21.3,
+  "top_drivers": [
+    "contradiction_strength=0.62",
+    "reality_score=-0.31"
+  ]
+}</code>
+        </div>
+      </article>
+    </section>
+
+    <section class="compare">
+      <h2>Answer engines summarize text. Meridian compiles evidence.</h2>
+      <p>Perplexity-style systems return narratives. Meridian returns a reproducible, provenance-backed score with explicit invalidation conditions and deterministic lineage hashes.</p>
+      <code>POST /v1/ipo/score
+{
+  "company_id": "ACME-IPO",
+  "as_of_ts": "2026-02-24T15:30:00Z",
+  "horizon_days": 28
+}</code>
+    </section>
+
+    <footer>
+      Meridian is a shadow-research system for explainable alpha discovery, not live execution.
+    </footer>
+  </div>
+</body>
+</html>
